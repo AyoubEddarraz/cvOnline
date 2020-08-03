@@ -1,0 +1,228 @@
+.optionProjet .option{
+    background-color: #3498db;
+    border: 1px solid white;
+    color: white;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: background .3s ease-in-out , color .3s ease-in-out;
+}
+
+.optionProjet .option:hover{
+    background-color: white;
+    color: #3498db;
+}
+
+.activeSwitch{
+    background-color: white !important;
+    color: #3498db !important;
+}
+
+/* Section show projet */
+
+.realisationProjet .realisation{
+    height: auto;
+    padding: 1.5rem;
+}
+
+.realisation .realistationContent{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.realistationContent:hover{
+    transform: scale(1.1);
+}
+
+.realistationContent:hover .afficherMore{
+    visibility: visible;
+    opacity: 1;
+}
+
+.realistationContent .afficherMore{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s ease-in-out , opacity .3s ease-in-out;
+}
+
+.afficherMore button{
+    font-size: .9rem;
+    font-weight: bold;
+    color: white;
+}
+
+.realistationContent img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.realistationContent h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.realistationContent p{
+    font-size: .9rem;
+    font-weight: bold;
+    color: grey;
+    margin: 1rem;
+}
+
+/* Modal realisation */
+
+.modalRealisationContainer{
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
+}
+
+.modalRealisation{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow: hidden auto;
+}
+
+      /* Close Modal */
+
+      .closeModal{
+          width: 100%;
+          padding: .5rem 1rem;
+          /* background-color: green; */
+          text-align: end;
+      }
+
+      .closeModal i{
+          background-color: #ecf0f1;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          line-height: 35px;
+          text-align: center;
+          cursor: pointer;
+      }
+    
+      /* Content Modal */
+
+      .modalReaContentSlide{
+          width: 100%;
+          height: auto;
+          padding: 1rem;
+          /* background-color: red; */
+          margin: 0 auto;
+      }
+
+      .iconeSlide{
+          background-color: #3498db;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          color: #ecf0f1;
+          line-height: 30px;
+          text-align: center;
+      }
+
+      /* Desc modal */
+
+      .descModal h3{
+          font-size: 1.1rem;
+          font-weight: bold;
+      }
+
+      .descModal p{
+          font-size: .9rem;
+          font-weight: bold;
+          color: grey;
+      }
+
+      .descModal h5{
+          font-size: .7rem;
+      }
+
+      .descModal h5 span{
+        font-size: .7rem;
+        font-weight: bold;
+      }
+
+      /* Technologie parte */
+
+      .technologieRea{
+          background-color: #3498db;
+          border-radius: 9999px;
+          padding: .5rem 1rem;
+          font-size: .9rem;
+          font-weight: bold;
+          color: white;
+      }
+
+      /* Frame Youtube */
+
+      .youtubeFrameRea{
+          width: 100%;
+          margin: 0 auto;
+      }
+
+      .youtubeFrameRea .frame{
+          margin: 0 auto;
+          width: 100%;
+      }
+
+      .frame iframe{
+          width: 100%;
+          height: 350px;
+          border-radius: 10px;
+      }
+
+      /* Github link */
+
+      .githubLink{
+          width: 200px;
+          border-radius: 9999px;
+          background-color: #3498db;
+          text-align: center;
+          padding: .5rem 1rem;
+          margin: 0 auto;
+      }
+
+      .githubLink a{
+        font-size: .9rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+      }
+
+/* Start MediaQuery */
+
+@media screen and (max-width : 768px){
+    .realistationContent:hover{
+        transform: scale(1);
+    }
+
+    .realistationContent .afficherMore{
+        visibility: visible;
+        opacity: 1;
+    }
+}

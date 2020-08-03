@@ -1,0 +1,24 @@
+<div class="container text-center my-5">
+
+    <!-- title of section -->
+    <h2>DIVERS</h2>
+
+    <hr width="10%" style="margin: 0 auto;" color="#3498db">
+
+    <p class="my-5">« Il faut donner du temps au temps » Miguel de Cervantès</p>
+
+    <div class="row">
+        <div class="connaissance col-lg-4 col-md-6" *ngFor="let connaissance of divers">
+            <div class="contentConnaissance d-flex bg-light shadow rounded my-3">
+                <div class="iconeConnaissance d-flex">
+                    <i [class]="connaissance.icone"></i>
+                </div>
+                <div class="infoConnaissance">
+                    <h5 class="my-3"> {{ connaissance.nameCompetence }} </h5>
+                    <p class="my-1"> {{ connaissance.genreCompetence}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

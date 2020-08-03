@@ -1,0 +1,45 @@
+.infoPersonel{
+    text-align: start;
+}
+
+.infoItem{
+    height: auto;
+    padding: 2rem 1rem;
+}
+
+.infoItem .item{
+    width: 400px;
+    min-height: 200px;
+    height: auto;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+ul{
+    list-style: none;
+}
+
+.item:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width : 400px){
+
+    .infoItem{
+        padding: 2rem 2rem;
+    }
+
+    .infoItem .item{
+        width: 300px;
+    } 
+
+}
+
+@media screen and (max-width : 768px){
+    .item:hover{
+        transform: scale(1);
+    } 
+}

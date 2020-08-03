@@ -1,0 +1,105 @@
+<div class="modalRealisationContainer" [hidden]="closeModal">
+    <div class="modalRealisation shadow-lg">
+        <div class="closeModal" (click)="closeModalFun()"><i class="fas fa-times"></i></div>
+        <div class="row">
+            <div class="modalReaContentSlide my-3 col-lg-6">
+                <div id="carouselExampleControls" class="carousel slide rounded shadow" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item rounded" *ngFor="let modalRes of moreRealisation.picture ; index as i" [class.active]="i == 0">
+                        <img [class.active]="" [src]="modalRes" class="d-block w-100 rounded" alt="img not found">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <i class="fas fa-arrow-left iconeSlide"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <i class="fas fa-arrow-right iconeSlide"></i>
+                    </a>
+                  </div>
+            </div>
+        </div>
+
+        <div class="descModal text-center">
+            <h2>{{ moreRealisation.name }}</h2>
+            <p class="px-4 my-3"> {{ moreRealisation.desc }} </p>
+            <h5 class="mb-5">Réalisé par : <span> {{ moreRealisation.realisePar }} </span></h5>
+
+            <h4>Technologie</h4>
+            <hr width="10%" style="margin: 0 auto;" color="#3498db" class="mb-4">
+
+            <span class="technologieRea">{{ moreRealisation.technologie }}</span>
+
+        </div>
+
+        <div class="row youtubeFrameRea my-4">
+            <div class="frame col-lg-6">
+                <iframe class="shadow" src="https://www.youtube.com/embed/UMKWijxv0kE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="githubLink"><a href="#">Github Link</a></div>
+
+
+    </div>
+</div>
+
+<div class="container text-center my-5">
+
+    <!-- title of section -->
+    <h2>REALISATION</h2>
+
+    <hr width="10%" style="margin: 0 auto;" color="#3498db">
+
+    <p class="my-5">« La seule réalisation impérissable du travail et de l'énergie humaine, c'est l'art. » Léon Blum</p>
+
+    <div class="row optionProjet my-5 p-3">
+            <div class="col-lg-4 option all" [class.activeSwitch]="activeCase == 'all'" (click)="activeCase = 'all' ">All</div>
+            <div class="col-lg-4 option js" [class.activeSwitch]="activeCase == 'js'" (click)="activeCase = 'js' ">JavaScript</div>
+            <div class="col-lg-4 option angular" [class.activeSwitch]="activeCase == 'angular'" (click)="activeCase = 'angular' ">Angular</div>
+    </div>
+
+    <div class="row realisationProjet" [ngSwitch]="activeCase">
+        <div *ngSwitchCase="'all'" class="row">
+            <div class="realisation col-lg-4 col-md-6" *ngFor="let res of allrealistation">
+                <div class="realistationContent shadow">
+                    <img [src]="res.picture[0]" alt="img not found">
+                    <h3 class="my-3">{{res.name}}</h3>
+                    <p class="pb-5">{{res.desc | catdesc:50}}</p>
+    
+                    <div class="afficherMore d-flex">
+                        <button class="btn btn-blue" (click)="AddTomodal(res)">Afficher plus</button>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'angular'" class="row">
+            <div class="realisation col-lg-4 col-md-6" *ngFor="let res of angualarProject">
+                <div class="realistationContent shadow">
+                    <img [src]="res.picture[0]" alt="img not found">
+                    <h3 class="my-3">{{res.name}}</h3>
+                    <p class="pb-5">{{res.desc | catdesc:50}}</p>
+    
+                    <div class="afficherMore d-flex">
+                        <button class="btn btn-blue" (click)="AddTomodal(res)">Afficher plus</button>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'js'" class="row">
+            <div class="realisation col-lg-4 col-md-6" *ngFor="let res of jsProject">
+                <div class="realistationContent shadow">
+                    <img [src]="res.picture[0]" alt="img not found">
+                    <h3 class="my-3">{{res.name}}</h3>
+                    <p class="pb-5">{{res.desc | catdesc:50}}</p>
+    
+                    <div class="afficherMore d-flex">
+                        <button class="btn btn-blue" (click)="AddTomodal(res)">Afficher plus</button>
+                    </div>
+    
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>

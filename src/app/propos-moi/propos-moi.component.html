@@ -1,0 +1,31 @@
+<div class="container text-center my-5">
+    <!-- title of section -->
+    <h2>A PROPOS DE MOI</h2>
+
+    <hr width="10%" style="margin: 0 auto;" color="#3498db">
+
+    <!-- content of section -->
+
+    <div class="infoPersonel mt-5">
+        <h3 style="color: #3498db; font-weight: bold;">Développeur Web</h3>
+
+        <div class="row mt-5">
+            <div class="infoItem p-2 col-lg-6">
+                <div class="item shadow bg-light">
+                    <ul *ngFor="let info of infoPersonel.info1">
+                        <li><strong>{{ info.info }} : </strong> {{ info.details }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="infoItem p-2 col-lg-6">
+                <div class="item shadow bg-light">
+                    <ul *ngFor="let info of infoPersonel.info2">
+                        <li><strong>{{ info.info }} : </strong> {{ info.details }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

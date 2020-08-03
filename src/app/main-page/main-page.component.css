@@ -1,0 +1,156 @@
+/* main page */
+
+.mainpage{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.mainpage svg{
+    position: absolute;
+    bottom: 0;
+}
+
+.showguide{
+    position: absolute;
+    /* position: fixed; */
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background: #3498db;
+    color: white;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* guide page */
+
+.guidePage{
+    position: absolute;
+    position: fixed;
+    overflow: hidden auto;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 10000;
+    background-color: #3498db;
+}
+
+.showHide i{
+    font-size: 2rem;
+    margin-top: .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    background-color: #bdc3c773;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    z-index: 1000;
+}
+
+.guidePage .imgPro{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+/* List guide page */
+
+.guidePage .listGuide{
+    width: 100%;
+    padding: 2rem 1rem;
+    height: auto;
+    margin: 2rem auto;
+}
+
+.linkguide > div:nth-child(1){
+    width: 20%;
+}
+
+.linkguide > div:nth-child(2){
+    width: 80%;
+    text-align: start;
+}
+
+.listGuide .linkguide{
+    width: 100%;
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+    background-color: white;
+    border-radius: 9999px;
+}
+
+.linkguide .iconeLink{
+    color: #bdc3c7;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+
+.linkguide:hover .iconeLink{
+    color: #3498db;
+}
+
+.linkguide .guidlink{
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.guidePage .copyright{
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+.copyright span{
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* home page info personel */
+
+.homepage{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets/images/homeback.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoPer{
+    padding: 1rem 2rem;
+    text-align: center;
+    background: white;
+}
+
+.infoPer h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.infoPer p{
+    font-weight: bold;
+    color: #bdc3c7;
+}
+
+.infoPer button{
+    font-size: .9rem;
+    font-weight: bold;
+    color: white;
+}
+
+.infoPer img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

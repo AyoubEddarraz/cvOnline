@@ -1,0 +1,54 @@
+<div class="mainpage">
+
+    <!-- guide page qui contient la list de guide et les info personel -->
+    <div class="guidePage text-center" [hidden]="!active">
+
+        <!-- close guide icone  -->
+        <div class="showHide w-100 text-center"><i class="fas fa-times" (click)="closeGuide()"></i></div>
+        <hr>
+        <!-- End -->
+
+        <!-- img Personnel and name -->
+        <img class="imgPro" [src]="myimg" alt="img Not found" draggable="false">
+        <h4 style="font-size: 1.2rem; font-weight: bold;" class="mt-2 text-light">Ayoub Eddarraz</h4>
+        <!-- End  -->
+
+        <!-- la list de guide -->
+        <div class="listGuide">
+            <div class="linkguide d-flex" *ngFor="let link of linkguideArray">
+                <div><i class="iconeLink" [class]="link.iconelien"></i></div>
+                <div><a [routerLink]="link.lien" class="guidlink" (click)="closeGuide()">{{ link.namelien }}</a></div>
+            </div>
+        </div>
+        <!-- end -->
+        
+        <!-- copyright -->
+        <h4 class="copyright mb-3">&copy; Copyright <span>Ayoub Eddarraz</span></h4>
+        <!-- end -->
+
+    </div>
+    <!-- end -->
+
+    <!-- pour afficher la list de guide -->
+    <div class="showguide" (click)="showguide()"><i class="fas fa-bars"></i></div>
+    <!-- end -->
+
+    <!-- info personel -->
+    <div class="homepage">
+        <div class="infoPer rounded shadow-lg mx-5">
+            <img [src]="myimg" alt="img not found" draggable="false">
+            <h2 class="my-3">Ayoub Eddarraz</h2>
+            <p>Développeur des systèmes d'information</p>
+            <button class="btn btn-blue">Download My CV</button>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- svg pour la decoratio de la page de guide -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ecf0f1" fill-opacity="1" d="M0,64L48,90.7C96,117,192,171,288,202.7C384,235,480,245,576,229.3C672,213,768,171,864,160C960,149,1056,171,1152,170.7C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <!-- end -->
+    
+</div>
+
+
+<router-outlet></router-outlet>
